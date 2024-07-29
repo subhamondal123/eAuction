@@ -1,0 +1,23 @@
+####react-native-countdown component ApiModule
+
+======>>>>>>> Changes done
+
+1. In index.js
+    a)ComponentDidMount()
+
+    // AppState.addEventListener('change', this._handleAppStateChange);
+    this.state.eventListener = AppState.addEventListener('change', this._handleAppStateChange); (added)
+
+    b)Componentwillunmount()
+     this.state.eventListener.remove(); (added)
+    // AppState.removeEventListener('change', this._handleAppStateChange);
+
+    c)state = {
+    until: Math.max(this.props.until, 0),
+    lastUntil: null,
+    wentBackgroundAt: null,
+    eventListener: null, // NEW LINE (added)
+  };
+
+
+  entitytypeid : 3 == "auctioneer" , 4 == "bidder/vendor"
